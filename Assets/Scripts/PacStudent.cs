@@ -1,27 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PacStudentSFX : MonoBehaviour
+public class UIButtonSound : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip moveClip;
-    public AudioClip eatClip;
-    public AudioClip deathClip;
+    public AudioClip eat;
 
-    // moving
-    public void PlayMove()
+    void Start()
     {
-        if (moveClip) audioSource.PlayOneShot(moveClip);
+        Button btn = GetComponent<Button>();
+        if (btn != null)
+            btn.onClick.AddListener(PlayClickSound);
     }
 
-    // eating
-    public void PlayEat()
+    void PlayClickSound()
     {
-        if (eatClip) audioSource.PlayOneShot(eatClip);
-    }
-
-    // gameover
-    public void PlayDeath()
-    {
-        if (deathClip) audioSource.PlayOneShot(deathClip);
+        if (audioSource != null && eat != null)
+            audioSource.PlayOneShot(eat);
     }
 }
