@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: backgtround
+    uniqueID: 1230462049
+    locked: 0
+  - name: maze
+    uniqueID: 2296055795
+    locked: 0
+  - name: Pellets
+    uniqueID: 3040474255
+    locked: 0
+  - name: Characters
+    uniqueID: 951660495
+    locked: 0
